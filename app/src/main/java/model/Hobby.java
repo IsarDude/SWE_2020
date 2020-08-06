@@ -1,6 +1,6 @@
 package model;
 
-public class Hobbie{
+public class Hobby {
 
     private String name;
 
