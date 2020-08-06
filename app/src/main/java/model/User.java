@@ -1,5 +1,8 @@
 package model;
 
+import java.util.Iterator;
+import java.util.LinkedList;
+
 public class User {
     private String firstName;
     private  String lastName;
@@ -12,19 +15,20 @@ public class User {
     private String userID;
     private boolean visible;
     private boolean verified;
-    private Hobby[] hobbies;
-    private Photo[] photos;
+    private LinkedList<Hobby> hobbies;
+    private LinkedList<Photo> photos;
+    private LinkedList<Course> courses;
     private Location location;
-    private Course[] courses;
     private Filter filter;
     private Subject subject;
     private Like[] likes;
     private Dislike[] dislikes;
 
     public User() {
-        hobbies = new Hobby[10];
-        photos = new Photo[6];
-        courses = new Course[12];
+        hobbies = new LinkedList<Hobby>();
+        photos = new LinkedList<Photo>();
+        courses = new LinkedList<Course>();
+
         likes = new Like[500];
         dislikes = new Dislike[1000];
     }
@@ -118,31 +122,38 @@ public class User {
     }
 
     public void addHobby(Hobby hobby) {
-        int freeIndex = hobbies.length;
-        hobbies[freeIndex] = hobby;
+        hobbies.add(hobby);
     }
 
-    public void removeHobby(String hobby) {
-        //Hier durchiterieren ob String "blabla" vorhanden ist. falls ja -> löschen
-        for ( Hobby : hobbies) {
-            System.out.println(hobby);
+    public void removeHobby(String deletableHobby) {
+        Iterator<Hobby> hobbyIterator = hobbies.iterator();
+        //Iterates through hobbies list and searches for Objects with matching hobbyNames. If so, deletes the Object in the list.
+        while (hobbyIterator.hasNext()) {
+            if (hobbyIterator.next().getName() == deletableHobby) {
+                hobbies.remove();
+            }
         }
     }
 
-    public Hobby[] getHobbies() {
+    public LinkedList<Hobby> getHobbies() {
         return hobbies;
     }
 
     public void addPhoto(Photo photo) {
-        int freeIndex = photos.length;
-        photos[freeIndex] = photo;
+        photos.add(photo);
     }
 
-    public void removePhoto() {
-        //Welches photo soll verschwinden?
+    public void removePhoto(String deletablePhotoID) {
+        Iterator<Photo> photoIterator = photos.iterator();
+        //Iterates through photos list and searches for Objects with matching photoIDs. If so, deletes the Object in the list.
+        while (photoIterator.hasNext()) {
+            if (photoIterator.next().getPhotoID() == deletablePhotoID) {
+                photos.remove();
+            }
+        }
     }
 
-    public Photo[] getPhotos() {
+    public LinkedList<Photo> getPhotos() {
         return photos;
     }
 
@@ -150,8 +161,9 @@ public class User {
         return location;
     }
 
-    public void changeLocation(Location location) {
-        this.location = location;
+    public void changeLocation(float newGps, String newName) {
+        location.setGPS(newGps);
+        location.setName(newName);
     }
 
     public int[] getFreeTimeslots() {
@@ -160,12 +172,17 @@ public class User {
     }
 
     public void addCourse(Course course) {
-        int freeIndex = courses.length;
-        courses[freeIndex] = course;
+        courses.add(course);
     }
 
-    public void removeCourse(String courseID) {
-        //Welcher course soll verschwinden?
+    public void removeCourse(String deletableCourseID) {
+        Iterator<Course> courseIterator = courses.iterator();
+        //Iterates through courses list and searches for Objects with matching courseIDs. If so, deletes the Object in the list.
+        while (courseIterator.hasNext()) {
+            if (courseIterator.next().getCourseID() == deletableCourseID) {
+                courses.remove();
+            }
+        }
     }
 
     public void changeFilter(int newMaxDistance, int[] newAgeRange, String[] newGenderPreferences) {
@@ -178,14 +195,16 @@ public class User {
         return filter;
     }
 
-    public void changeSubject(Subject subject) {
-        this.subject = subject;
+    public void changeSubject(int newSemester, String newName) {
+        subject.setSemester(newSemester);
+        subject.setName(newName);
     }
 
     public Subject getSubject() {
         return subject;
     }
 
+    //Add a Like to the Array and check for a possible Match
     public void createLike(Like like) {
         int freeIndex = likes.length;
         likes[freeIndex] = like;
