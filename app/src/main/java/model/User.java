@@ -121,7 +121,8 @@ public class User {
         this.verified = verified;
     }
 
-    public void addHobby(Hobby hobby) {
+    public void addHobby(String newHobby) {
+        Hobby hobby = new Hobby(newHobby);
         hobbies.add(hobby);
     }
 
@@ -168,7 +169,7 @@ public class User {
 
     public int[] getFreeTimeslots() {
         //Erstmal rauslassen
-        return;
+        return null;
     }
 
     public void addCourse(Course course) {
@@ -222,7 +223,7 @@ public class User {
 
     public boolean checkForNewMessages() {
         //Was passiert hier?
-        return;
+        return false;
     }
 
     public void updateFromDatabase() {

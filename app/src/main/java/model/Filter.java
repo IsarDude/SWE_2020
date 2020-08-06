@@ -6,6 +6,11 @@ public class Filter{
     private int[] ageRange;
     private String[] genderPreferences;
 
+    public Filter(int maxDistance, int[] ageRange, String[] genderPreferences){
+        this.maxDistance = maxDistance;
+        this.ageRange = ageRange;
+        this.genderPreferences = genderPreferences;
+    }
 
     public int getMaxDistance() {
         return maxDistance;
