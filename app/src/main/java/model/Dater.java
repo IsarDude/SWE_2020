@@ -14,11 +14,11 @@ public class Dater {
     }
 
     public void like(String otherUserId){
-
+        user.createLike(otherUserId);
     }
 
-    public void dislike(){
-
+    public void dislike(String dislikedUserID){
+        user.createDislike(dislikedUserID);
     }
 
     public void showMatches(){

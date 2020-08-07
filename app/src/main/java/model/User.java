@@ -206,13 +206,15 @@ public class User {
     }
 
     //Add a Like to the Array and check for a possible Match
-    public void createLike(Like like) {
+    public void createLike(String likedUserId) {
+        Like like = new Like(likedUserId);
         int freeIndex = likes.length;
         likes[freeIndex] = like;
-        like.checkForMatch();
+        like.checkForMatch(userID);
     }
 
-    public void createDislike(Dislike dislike) {
+    public void createDislike(String dislikedUserId) {
+        Dislike dislike = new Dislike(dislikedUserId);
         int freeIndex = dislikes.length;
         dislikes[freeIndex] = dislike;
     }
