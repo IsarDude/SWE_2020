@@ -7,6 +7,10 @@ public class Like {
         this.likedUserId = likedUserID;
     }
 
+    public String getLikedUserId(){
+        return likedUserId;
+    }
+
     public void checkForMatch(String userId){
 
     }

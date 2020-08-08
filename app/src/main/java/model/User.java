@@ -186,9 +186,9 @@ public class User {
         }
     }
 
-    public void changeFilter(int newMaxDistance, int[] newAgeRange, String[] newGenderPreferences) {
+    public void changeFilter(int newMaxDistance, int newMaxAge,int newMinAge, String newGenderPreferences) {
         filter.setMaxDistance(newMaxDistance);
-        filter.setAgeRange(newAgeRange);
+        filter.setAgeRange(newMaxAge, newMinAge);
         filter.setGenderPreferences(newGenderPreferences);
     }
 

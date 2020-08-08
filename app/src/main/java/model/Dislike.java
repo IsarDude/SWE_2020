@@ -7,4 +7,8 @@ public class Dislike {
     public Dislike(String dislikedUserId){
         this.dislikedUserId = dislikedUserId;
     }
+
+    public String getDislikedUserId(){
+        return dislikedUserId;
+    }
 }
