@@ -7,7 +7,7 @@ public class User {
     private String firstName;
     private  String lastName;
     private int age;
-    private String gender;
+    private String[] gender;
     private String language;
     private String infoText;
     private String email;
@@ -57,11 +57,11 @@ public class User {
         this.age = age;
     }
 
-    public String getGender() {
+    public String[] getGender() {
         return gender;
     }
 
-    public void setGender(String gender) {
+    public void setGender(String[] gender) {
         this.gender = gender;
     }
 
@@ -186,7 +186,7 @@ public class User {
         }
     }
 
-    public void changeFilter(int newMaxDistance, int newMaxAge,int newMinAge, String newGenderPreferences) {
+    public void changeFilter(int newMaxDistance, int newMaxAge,int newMinAge, String[] newGenderPreferences) {
         filter.setMaxDistance(newMaxDistance);
         filter.setAgeRange(newMaxAge, newMinAge);
         filter.setGenderPreferences(newGenderPreferences);

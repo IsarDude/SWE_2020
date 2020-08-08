@@ -8,6 +8,7 @@ import java.util.Random;
 public class SinglesPool {
     List<User> users;
     User randomUser;
+    private boolean genderChecker;
 
     public SinglesPool(List<User> users, Filter filter){
         this.users = users;
@@ -16,13 +17,25 @@ public class SinglesPool {
 
     public void createPool(Filter filter){
         for(int i = 0; i<users.size(); i++){
+            //Abfrage für das Alter
             if(filter.getMaxAge()<users.get(i).getAge() || filter.getMinAge()>users.get(i).getAge()){
                 users.remove(i);
             }
-            if(!filter.getGenderPreferences().equals(users.get(i).getGender())){
+            //Abfrage für Geschlechts Präferenzen
+            genderChecker= false;
+            for(int x = 0; x< filter.getGenderPreferences().length; x++){
+                for(int y = 0; y< users.get(i).getGender().length; y++){
+                    if(filter.getGenderPreferences()[x].equals(users.get(i).getGender()[y])){
+                        genderChecker = true;
+                    }
+                }
+            }
+
+            if(genderChecker==false){
                 users.remove(i);
             }
-            //Location funktioniert wahrscheinlich noch nicht
+
+            //Abfrage für Location, funktioniert wahrscheinlich noch nicht
             if(filter.getMaxDistance()<users.get(i).getLocation().getGPS()){
                 users.remove(i);
             }
