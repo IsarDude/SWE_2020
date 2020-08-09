@@ -2,6 +2,7 @@ package model;
 
 public class Like {
     private String likedUserId;
+    Match match;
 
     public Like(String likedUserID){
         this.likedUserId = likedUserID;
@@ -16,6 +17,10 @@ public class Like {
     }
 
     public void createMatch(){
-        Match match = new Match(likedUserId);
+        match = new Match(likedUserId);
+    }
+
+    public Match getMatch(){
+        return this.match;
     }
 }
