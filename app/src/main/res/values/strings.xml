@@ -1,3 +1,42 @@
 <resources>
     <string name="app_name">FH Hof Dater</string>
+    <string name="label_profil">Profil</string>
+    <string name="label_settings">Einstellungen</string>
+    <string name="label_message">Deine Nachrichten</string>
+    <string name="label_cards">Deine Karten</string>
+    <string name="username">username</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="textView_messages">Deine Nachrichten</string>
+    <string name="textView_profile">Dein Profil</string>
+    <string name="textView_settings">Einstellungen</string>
+
+    <string name="profile_firstname">Vorname</string>
+    <string name="profile_lastname">Nachname</string>
+    <string name="profile_age">Alter</string>
+    <string name="profile_gender">Geschlecht</string>
+    <string name="profile_language">Sprache</string>
+    <string name="profile_infoText">Infomationen</string>
+    <string name="profile_email">Email</string>
+    <string name="profile_visible">Sichtbarkeit</string>
+
+    <string name="user_lastname">user_lastname</string>
+    <string name="user_age">user_age</string>
+    <string name="user_gender">user_gender</string>
+    <string name="user_language">user_language</string>
+    <string name="user_infoText">user_infoText</string>
+    <string name="user_email">user_email</string>
+    <string name="user_vivible">user_vivible</string>
+
+    <string name="editProfil">Profil bearbeiten</string>
+    <string name="user_hobby">user_hobby</string>
+    <string name="profile_hobby">Hobby</string>
+    <string name="login_username_label">Benutzername</string>
+    <string name="login_password">Passwort</string>
+    <string name="login_newUser">Neuer Benutzer? Jetzt Anmelden!</string>
+    <string name="login_resetPassword">Passwort vergessen?</string>
+    <string name="login_button_label">Login</string>
+
 </resources>
