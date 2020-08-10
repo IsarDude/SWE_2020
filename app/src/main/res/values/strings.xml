@@ -44,6 +44,9 @@
     <string name="login_resetPassword">Passwort vergessen?</string>
     <string name="login_button_label">Login</string>
     <string name="user_firstname">user_firstname</string>
+    <string name="card_picture_description">picture of other user</string>
+    <string name="like">Like</string>
+    <string name="dislike">Dislike</string>
 
 
 </resources>
