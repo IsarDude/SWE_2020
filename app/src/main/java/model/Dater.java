@@ -4,6 +4,7 @@ import java.io.File;
 
 public class Dater {
     User user;
+    SinglesPool singlesPool;
 
     public User showCard(){
         return user;
@@ -14,22 +15,20 @@ public class Dater {
     }
 
     public void like(String otherUserId){
-
+        user.createLike(otherUserId);
     }
 
-    public void dislike(){
-
+    public void dislike(String dislikedUserID){
+        user.createDislike(dislikedUserID);
     }
 
     public void showMatches(){
         //return type must be User[]
     }
 
-    public void showMessenger(String otherUserID){
-        //return type must be Message[]
-    }
 
-    public void changeUserInfo(String firstName, String lastName, int age, String gender, String email, boolean visible, String language, String infoText){
+
+    public void changeUserInfo(String firstName, String lastName, int age, String[] gender, String email, boolean visible, String language, String infoText){
         user.setFirstName(firstName);
         user.setLastName(lastName);
         user.setAge(age);
@@ -40,9 +39,7 @@ public class Dater {
         user.setInfoText(infoText);
     }
 
-    public void showMatchingFreetime(String otherUserID){
 
-    }
 
     public void login(String email, String password){
         if(true/*database contains email*/){
@@ -92,6 +89,12 @@ public class Dater {
     public void sendVoiceMessage(String otherUserID, File content){}
     public void sendVideoMessage(String otherUserID, File content){}
     public void sendPicture(String otherUserID, File content){}
+    public void showMessenger(String otherUserID){
+        //return type must be Message[]
+    }
+    public void showMatchingFreetime(String otherUserID){
+
+    }
 
 
 }

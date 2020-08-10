@@ -3,12 +3,14 @@ package model;
 public class Filter{
 
     private int maxDistance;
-    private int[] ageRange;
+    private int maxAge;
+    private int minAge;
     private String[] genderPreferences;
 
-    public Filter(int maxDistance, int[] ageRange, String[] genderPreferences){
+    public Filter(int maxDistance, int maxAge, int minAge, String[] genderPreferences){
         this.maxDistance = maxDistance;
-        this.ageRange = ageRange;
+        this.maxAge = maxAge;
+        this.minAge = minAge;
         this.genderPreferences = genderPreferences;
     }
 
@@ -20,12 +22,17 @@ public class Filter{
         this.maxDistance = maxDistance;
     }
 
-    public int[] getAgeRange() {
-        return ageRange;
+    public int getMaxAge() {
+        return maxAge;
     }
 
-    public void setAgeRange(int[] ageRange) {
-        this.ageRange = ageRange;
+    public int getMinAge() {
+        return minAge;
+    }
+
+    public void setAgeRange(int maxAge, int minAge) {
+        this.maxAge = maxAge;
+        this.minAge = minAge;
     }
 
     public String[] getGenderPreferences() {

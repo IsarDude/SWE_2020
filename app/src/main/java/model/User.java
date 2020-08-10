@@ -7,7 +7,7 @@ public class User {
     private String firstName;
     private  String lastName;
     private int age;
-    private String gender;
+    private String[] gender;
     private String language;
     private String infoText;
     private String email;
@@ -57,11 +57,11 @@ public class User {
         this.age = age;
     }
 
-    public String getGender() {
+    public String[] getGender() {
         return gender;
     }
 
-    public void setGender(String gender) {
+    public void setGender(String[] gender) {
         this.gender = gender;
     }
 
@@ -186,9 +186,9 @@ public class User {
         }
     }
 
-    public void changeFilter(int newMaxDistance, int[] newAgeRange, String[] newGenderPreferences) {
+    public void changeFilter(int newMaxDistance, int newMaxAge,int newMinAge, String[] newGenderPreferences) {
         filter.setMaxDistance(newMaxDistance);
-        filter.setAgeRange(newAgeRange);
+        filter.setAgeRange(newMaxAge, newMinAge);
         filter.setGenderPreferences(newGenderPreferences);
     }
 
@@ -206,13 +206,15 @@ public class User {
     }
 
     //Add a Like to the Array and check for a possible Match
-    public void createLike(Like like) {
+    public void createLike(String likedUserId) {
+        Like like = new Like(likedUserId);
         int freeIndex = likes.length;
         likes[freeIndex] = like;
-        like.checkForMatch();
+        like.checkForMatch(userID);
     }
 
-    public void createDislike(Dislike dislike) {
+    public void createDislike(String dislikedUserId) {
+        Dislike dislike = new Dislike(dislikedUserId);
         int freeIndex = dislikes.length;
         dislikes[freeIndex] = dislike;
     }
