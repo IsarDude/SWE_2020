@@ -61,13 +61,13 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:padding="10sp">
+            android:orientation="horizontal">
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center">
+                android:gravity="center"
+                android:padding="10sp">
 
 
                 <TextView
@@ -83,12 +83,15 @@
                 android:layout_height="match_parent"
                 android:gravity="center">
 
-
-                <TextView
-                    android:id="@+id/user_firstname"
+                <EditText
+                    android:id="@+id/edit_firstname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/user_firstname" />
+                    android:elegantTextHeight="false"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="@string/user_firstname"
+                    android:textSize="12sp" />
             </TableRow>
 
         </TableRow>
@@ -96,13 +99,13 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:padding="10sp">
+            android:orientation="horizontal">
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center">
+                android:gravity="center"
+                android:padding="10sp">
 
 
                 <TextView
@@ -118,25 +121,28 @@
                 android:layout_height="match_parent"
                 android:gravity="center">
 
-
-                <TextView
-                    android:id="@+id/user_lastname"
+                <EditText
+                    android:id="@+id/edit_lastname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/user_lastname" />
+                    android:elegantTextHeight="false"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="@string/user_lastname"
+                    android:textSize="12sp" />
             </TableRow>
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:padding="10sp">
+            android:orientation="horizontal">
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center">
+                android:gravity="center"
+                android:padding="10sp">
 
 
                 <TextView
@@ -152,12 +158,15 @@
                 android:layout_height="match_parent"
                 android:gravity="center">
 
-
-                <TextView
-                    android:id="@+id/user_age"
+                <EditText
+                    android:id="@+id/edit_age"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/user_age" />
+                    android:elegantTextHeight="false"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="@string/user_age"
+                    android:textSize="12sp" />
             </TableRow>
 
         </TableRow>
@@ -165,13 +174,13 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:padding="10sp">
+            android:orientation="horizontal">
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center">
+                android:gravity="center"
+                android:padding="10sp">
 
 
                 <TextView
@@ -187,12 +196,15 @@
                 android:layout_height="match_parent"
                 android:gravity="center">
 
-
-                <TextView
-                    android:id="@+id/user_gender"
+                <EditText
+                    android:id="@+id/edit_gender"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/user_gender" />
+                    android:elegantTextHeight="false"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="@string/user_gender"
+                    android:textSize="12sp" />
             </TableRow>
 
         </TableRow>
@@ -200,13 +212,13 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:padding="10sp">
+            android:orientation="horizontal">
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center">
+                android:gravity="center"
+                android:padding="10sp">
 
 
                 <TextView
@@ -222,12 +234,15 @@
                 android:layout_height="match_parent"
                 android:gravity="center">
 
-
-                <TextView
-                    android:id="@+id/user_language"
+                <EditText
+                    android:id="@+id/edit_language"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/user_language" />
+                    android:elegantTextHeight="false"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="@string/user_language"
+                    android:textSize="12sp" />
             </TableRow>
 
         </TableRow>
@@ -235,13 +250,13 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:padding="10sp">
+            android:orientation="horizontal">
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center">
+                android:gravity="center"
+                android:padding="10sp">
 
 
                 <TextView
@@ -257,12 +272,15 @@
                 android:layout_height="match_parent"
                 android:gravity="center">
 
-
-                <TextView
-                    android:id="@+id/user_infoText"
+                <EditText
+                    android:id="@+id/edit_infoText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/user_infoText" />
+                    android:elegantTextHeight="false"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="@string/user_infoText"
+                    android:textSize="12sp" />
             </TableRow>
 
         </TableRow>
@@ -270,13 +288,13 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:padding="10sp">
+            android:orientation="horizontal">
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center">
+                android:gravity="center"
+                android:padding="10sp">
 
 
                 <TextView
@@ -292,12 +310,15 @@
                 android:layout_height="match_parent"
                 android:gravity="center">
 
-
-                <TextView
-                    android:id="@+id/user_hobby"
+                <EditText
+                    android:id="@+id/edit_hobby"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/user_hobby" />
+                    android:elegantTextHeight="false"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="@string/user_hobby"
+                    android:textSize="12sp" />
             </TableRow>
 
         </TableRow>
@@ -305,13 +326,13 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:padding="10sp">
+            android:orientation="horizontal">
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center">
+                android:gravity="center"
+                android:padding="10sp">
 
 
                 <TextView
@@ -327,12 +348,15 @@
                 android:layout_height="match_parent"
                 android:gravity="center">
 
-
-                <TextView
-                    android:id="@+id/user_email"
+                <EditText
+                    android:id="@+id/edit_email"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/user_email" />
+                    android:elegantTextHeight="false"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="@string/user_email"
+                    android:textSize="12sp" />
             </TableRow>
 
         </TableRow>
@@ -340,13 +364,13 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:padding="10sp">
+            android:orientation="horizontal">
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center">
+                android:gravity="center"
+                android:padding="10sp">
 
 
                 <TextView
@@ -362,12 +386,15 @@
                 android:layout_height="match_parent"
                 android:gravity="center">
 
-
-                <TextView
-                    android:id="@+id/user_visible"
+                <EditText
+                    android:id="@+id/edit_visible"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/user_vivible" />
+                    android:elegantTextHeight="false"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="@string/user_vivible"
+                    android:textSize="12sp" />
             </TableRow>
 
         </TableRow>
@@ -385,10 +412,9 @@
                 android:id="@+id/editProfile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/editProfil"
+                android:text="@string/saveProfil"
                 android:background="@color/colorPrimary"
-                android:textColor="#FFFFFF"
-                />
+                android:textColor="#FFFFFF" />
         </TableRow>
     </TableLayout>
 

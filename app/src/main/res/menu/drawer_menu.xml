@@ -9,6 +9,10 @@
             android:icon="@drawable/ic_cards"
             android:title="@string/label_cards" />
         <item
+            android:id="@+id/nav_matches"
+            android:icon="@drawable/ic_matches"
+            android:title="@string/label_matches" />
+        <item
             android:id="@+id/nav_messages"
             android:icon="@drawable/ic_message"
             android:title="@string/label_message" />
