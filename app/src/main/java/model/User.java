@@ -16,10 +16,30 @@ public class User {
     private int userID;
     private boolean visible;
     private boolean verified;
+
+    public void setHobbies(LinkedList<Hobby> hobbies) {
+        this.hobbies = hobbies;
+    }
+
+    public void setPhotos(LinkedList<Photo> photos) {
+        this.photos = photos;
+    }
+
+    public void setSubject(Subject subject) {
+        this.subject = subject;
+    }
+
     private LinkedList<Hobby> hobbies;
     private LinkedList<Photo> photos;
     private LinkedList<Course> courses;
+    private ArrayList<Like> likes;
+    private ArrayList<Dislike> dislikes;
 
+    public void setMatches(ArrayList<Match> matches) {
+        this.matches = matches;
+    }
+
+    private ArrayList<Match> matches;
     public void setLocation(Location location) {
         this.location = location;
     }
@@ -32,8 +52,16 @@ public class User {
 
     private Filter filter;
     private Subject subject;
-    private ArrayList<Like> likes;
-    private ArrayList<Dislike> dislikes;
+
+    public void setLikes(ArrayList<Like> likes) {
+        this.likes = likes;
+    }
+
+    public void setDislikes(ArrayList<Dislike> dislikes) {
+        this.dislikes = dislikes;
+    }
+
+
 
 
 
@@ -43,8 +71,8 @@ public class User {
         courses = new LinkedList<Course>();
 
         likes = new ArrayList<Like>();
-        dislikes = new Dislike[1000];
-
+        dislikes = new ArrayList<Dislike>();
+        matches = new ArrayList<Match>();
     }
 
     public String getFirstName() {
@@ -235,8 +263,7 @@ public class User {
 
     public void createDislike(String dislikedUserId) {
         Dislike dislike = new Dislike(dislikedUserId);
-        int freeIndex = dislikes.length;
-        dislikes[freeIndex] = dislike;
+        dislikes.add(dislike);
     }
 
     public void createMessage(String likeID, int messageType, String content) {
