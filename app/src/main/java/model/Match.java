@@ -5,11 +5,13 @@ import java.sql.Timestamp;
 public class Match {
 
     private Timestamp timestamp;
-    private String matchId;
+    private int matchId;
+    private int likedUserID;
 
-    public Match(String matchId){
+    public Match(int matchId, int aLikedUserID){
         timestamp = new Timestamp(System.currentTimeMillis());
         this.matchId = matchId;
+        this.likedUserID=aLikedUserID;
     }
 
     public void sendMessage(int messageType, String content){

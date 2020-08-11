@@ -1,5 +1,6 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
 
@@ -7,30 +8,43 @@ public class User {
     private String firstName;
     private  String lastName;
     private int age;
-    private String[] gender;
+    private String gender;
     private String language;
     private String infoText;
     private String email;
     private String password;
-    private String userID;
+    private int userID;
     private boolean visible;
     private boolean verified;
     private LinkedList<Hobby> hobbies;
     private LinkedList<Photo> photos;
     private LinkedList<Course> courses;
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
+
     private Location location;
+
+    public void setFilter(Filter filter) {
+        this.filter = filter;
+    }
+
     private Filter filter;
     private Subject subject;
-    private Like[] likes;
-    private Dislike[] dislikes;
+    private ArrayList<Like> likes;
+    private ArrayList<Dislike> dislikes;
+
+
 
     public User() {
         hobbies = new LinkedList<Hobby>();
         photos = new LinkedList<Photo>();
         courses = new LinkedList<Course>();
 
-        likes = new Like[500];
+        likes = new ArrayList<Like>();
         dislikes = new Dislike[1000];
+
     }
 
     public String getFirstName() {
@@ -57,11 +71,11 @@ public class User {
         this.age = age;
     }
 
-    public String[] getGender() {
+    public String getGender() {
         return gender;
     }
 
-    public void setGender(String[] gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 
@@ -97,11 +111,11 @@ public class User {
         this.password = password;
     }
 
-    public String getUserID() {
+    public int getUserID() {
         return userID;
     }
 
-    public void setUserID(String userID) {
+    public void setUserID(int userID) {
         this.userID = userID;
     }
 
@@ -163,6 +177,9 @@ public class User {
     }
 
     public void changeLocation(float newGps, String newName) {
+        if(location ==null){
+            location=new Location();
+        }
         location.setGPS(newGps);
         location.setName(newName);
     }
@@ -186,7 +203,10 @@ public class User {
         }
     }
 
-    public void changeFilter(int newMaxDistance, int newMaxAge,int newMinAge, String[] newGenderPreferences) {
+    public void changeFilter(int newMaxDistance, int newMaxAge,int newMinAge, String newGenderPreferences) {
+        if(filter == null){
+            filter = new Filter(newMaxDistance,newMaxAge,newMinAge,newGenderPreferences);
+        }
         filter.setMaxDistance(newMaxDistance);
         filter.setAgeRange(newMaxAge, newMinAge);
         filter.setGenderPreferences(newGenderPreferences);
@@ -206,10 +226,10 @@ public class User {
     }
 
     //Add a Like to the Array and check for a possible Match
-    public void createLike(String likedUserId) {
+    public void createLike(int likedUserId) {
         Like like = new Like(likedUserId);
-        int freeIndex = likes.length;
-        likes[freeIndex] = like;
+        int freeIndex = likes.size();
+        likes.set(freeIndex, like);
         like.checkForMatch(userID);
     }
 

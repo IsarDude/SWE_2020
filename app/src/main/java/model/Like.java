@@ -1,18 +1,18 @@
 package model;
 
 public class Like {
-    private String likedUserId;
+    private int likedUserId;
     Match match;
 
-    public Like(String likedUserID){
+    public Like(int likedUserID){
         this.likedUserId = likedUserID;
     }
 
-    public String getLikedUserId(){
+    public int getLikedUserId(){
         return likedUserId;
     }
 
-    public void checkForMatch(String userId){
+    public void checkForMatch(int userId){
 
     }
 

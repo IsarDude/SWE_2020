@@ -14,7 +14,7 @@ public class Dater {
 
     }
 
-    public void like(String otherUserId){
+    public void like(int otherUserId){
         user.createLike(otherUserId);
     }
 
@@ -28,7 +28,7 @@ public class Dater {
 
 
 
-    public void changeUserInfo(String firstName, String lastName, int age, String[] gender, String email, boolean visible, String language, String infoText){
+    public void changeUserInfo(String firstName, String lastName, int age, String gender, String email, boolean visible, String language, String infoText){
         user.setFirstName(firstName);
         user.setLastName(lastName);
         user.setAge(age);

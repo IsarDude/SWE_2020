@@ -5,9 +5,9 @@ public class Filter{
     private int maxDistance;
     private int maxAge;
     private int minAge;
-    private String[] genderPreferences;
+    private String genderPreferences;
 
-    public Filter(int maxDistance, int maxAge, int minAge, String[] genderPreferences){
+    public Filter(int maxDistance, int maxAge, int minAge, String genderPreferences){
         this.maxDistance = maxDistance;
         this.maxAge = maxAge;
         this.minAge = minAge;
@@ -35,11 +35,11 @@ public class Filter{
         this.minAge = minAge;
     }
 
-    public String[] getGenderPreferences() {
+    public String getGenderPreferences() {
         return genderPreferences;
     }
 
-    public void setGenderPreferences(String[] genderPreferences) {
+    public void setGenderPreferences(String genderPreferences) {
         this.genderPreferences = genderPreferences;
     }
 }

@@ -22,6 +22,7 @@ public class SinglesPool {
                 users.remove(i);
             }
             //Abfrage für Geschlechts Präferenzen
+            /* Muss noch geändert werden weil preferenc doch kein array sonder -> male,female,both
             genderChecker= false;
             for(int x = 0; x< filter.getGenderPreferences().length; x++){
                 for(int y = 0; y< users.get(i).getGender().length; y++){
@@ -29,7 +30,10 @@ public class SinglesPool {
                         genderChecker = true;
                     }
                 }
+
+
             }
+            */
 
             if(genderChecker==false){
                 users.remove(i);
