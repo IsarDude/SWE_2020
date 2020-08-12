@@ -16,6 +16,25 @@ public class User {
     private int userID;
     private boolean visible;
     private boolean verified;
+    private Subject subject;
+    private Location location;
+    private Filter filter;
+    private LinkedList<Hobby> hobbies;
+    private LinkedList<Photo> photos;
+    private LinkedList<Course> courses;
+    private ArrayList<Match> matches;
+    private ArrayList<Like> likes;
+    private ArrayList<Dislike> dislikes;
+
+    public User() {
+        hobbies = new LinkedList<Hobby>();
+        photos = new LinkedList<Photo>();
+        courses = new LinkedList<Course>();
+
+        likes = new ArrayList<Like>();
+        dislikes = new ArrayList<Dislike>();
+        matches = new ArrayList<Match>();
+    }
 
     public void setHobbies(LinkedList<Hobby> hobbies) {
         this.hobbies = hobbies;
@@ -29,29 +48,17 @@ public class User {
         this.subject = subject;
     }
 
-    private LinkedList<Hobby> hobbies;
-    private LinkedList<Photo> photos;
-    private LinkedList<Course> courses;
-    private ArrayList<Like> likes;
-    private ArrayList<Dislike> dislikes;
-
     public void setMatches(ArrayList<Match> matches) {
         this.matches = matches;
     }
 
-    private ArrayList<Match> matches;
     public void setLocation(Location location) {
         this.location = location;
     }
 
-    private Location location;
-
     public void setFilter(Filter filter) {
         this.filter = filter;
     }
-
-    private Filter filter;
-    private Subject subject;
 
     public void setLikes(ArrayList<Like> likes) {
         this.likes = likes;
@@ -59,20 +66,6 @@ public class User {
 
     public void setDislikes(ArrayList<Dislike> dislikes) {
         this.dislikes = dislikes;
-    }
-
-
-
-
-
-    public User() {
-        hobbies = new LinkedList<Hobby>();
-        photos = new LinkedList<Photo>();
-        courses = new LinkedList<Course>();
-
-        likes = new ArrayList<Like>();
-        dislikes = new ArrayList<Dislike>();
-        matches = new ArrayList<Match>();
     }
 
     public String getFirstName() {
@@ -205,8 +198,8 @@ public class User {
     }
 
     public void changeLocation(float newGps, String newName) {
-        if(location ==null){
-            location=new Location();
+        if(location == null){
+            location = new Location();
         }
         location.setGPS(newGps);
         location.setName(newName);
@@ -231,12 +224,12 @@ public class User {
         }
     }
 
-    public void changeFilter(int newMaxDistance, int newMaxAge,int newMinAge, String newGenderPreferences) {
+    public void changeFilter(int newMaxDistance, int newMinAge,int newMaxAge, String newGenderPreferences) {
         if(filter == null){
-            filter = new Filter(newMaxDistance,newMaxAge,newMinAge,newGenderPreferences);
+            filter = new Filter(newMaxDistance,newMinAge,newMaxAge,newGenderPreferences);
         }
         filter.setMaxDistance(newMaxDistance);
-        filter.setAgeRange(newMaxAge, newMinAge);
+        filter.setAgeRange(newMinAge, newMaxAge);
         filter.setGenderPreferences(newGenderPreferences);
     }
 
@@ -267,11 +260,11 @@ public class User {
     }
 
     public void createMessage(String likeID, int messageType, String content) {
-        //Was passiert hier?
+        //Erstmal rauslassen
     }
 
     public boolean checkForNewMessages() {
-        //Was passiert hier?
+        //Ertmal rauslassen
         return false;
     }
 

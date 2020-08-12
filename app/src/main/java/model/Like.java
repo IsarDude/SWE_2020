@@ -17,7 +17,7 @@ public class Like {
     }
 
     public void createMatch(){
-        match = new Match(likedUserId);
+        match = new Match(10, likedUserId);     //10 ist Plathalter, damit kein Fehler geworfen wird, Match erwartet momentan noch int matchID und int likeduseerid
     }
 
     public Match getMatch(){

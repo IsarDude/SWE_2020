@@ -13,6 +13,10 @@
             android:icon="@drawable/ic_matches"
             android:title="@string/label_matches" />
         <item
+            android:id="@+id/nav_filter"
+            android:icon="@drawable/ic_filter"
+            android:title="@string/label_filter" />
+        <item
             android:id="@+id/nav_messages"
             android:icon="@drawable/ic_message"
             android:title="@string/label_message" />
@@ -25,5 +29,18 @@
             android:icon="@drawable/ic_settings"
             android:title="@string/label_settings" />
     </group>
+
+    <item android:title="Aktionen">
+        <menu>
+            <item
+                android:id="@+id/nav_verify"
+                android:icon="@drawable/ic_verify"
+                android:title="Profil verifizieren" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_logout"
+                android:title="Log Out" />
+        </menu>
+    </item>
 
 </menu>

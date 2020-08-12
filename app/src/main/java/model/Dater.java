@@ -3,14 +3,53 @@ package model;
 import java.io.File;
 
 public class Dater {
+    private static Dater instance;
     User user;
     SinglesPool singlesPool;
 
-    public User showCard(){
+    private Dater(){
+
+    }
+
+    public static Dater getInstance(){
+        if (Dater.instance == null) {
+            Dater.instance = new Dater ();
+        }
+        return Dater.instance;
+    }
+
+    private static void setInstance(Dater dater){
+        if(Dater.instance!=null){
+            Dater.instance = null;
+            Dater.instance = dater;
+        }
+
+    }
+
+    public void createUser(String email, String password, String firstName, String lastName, int age, String gender, String language, String infoText, String hobby){
+        user = new User();
+        user.setEmail(email);
+        user.setPassword(password);
+        user.setFirstName(firstName);
+        user.setLastName(lastName);
+        user.setAge(age);
+        user.setGender(gender);
+        user.setLanguage(language);
+        user.setInfoText(infoText);
+        user.addHobby(hobby);
+        user.setVisible(true);
+    }
+
+    public User getCurrentUser(){
         return user;
     }
 
-    public void viewProfile(String userID){
+    public User showCard(){
+        User randomUser = singlesPool.getRandomUser();
+        return randomUser;
+    }
+
+    public void viewProfile(int userID){
 
     }
 
@@ -41,19 +80,25 @@ public class Dater {
 
 
 
-    public void login(String email, String password){
+    public boolean login(String email, String password){
         if(true/*database contains email*/){
             if(true/*password matches email found in database*/){
                 //Login successful
                 //set User as in database
+                //create SinglesPool
+                return true;
             }else{
                 //login failed
+                return false;
             }
+        }else{
+            return false;
         }
     }
 
     public void logout(){
         user=null;
+        //Wechseln zur Login Activity
     }
 
     public void addPhoto(File photo){

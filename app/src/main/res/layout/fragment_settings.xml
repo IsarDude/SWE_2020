@@ -70,7 +70,7 @@
                     android:id="@+id/setting1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="TextView"
+                    android:text="@string/language_label"
                     android:textAlignment="center"
                     android:textSize="18sp" />
             </TableRow>
@@ -80,11 +80,10 @@
                 android:layout_height="match_parent"
                 android:gravity="center">
 
-                <Button
-                    android:id="@+id/settingButton2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Button" />
+                <Spinner
+                    android:id="@+id/languageSpinner"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content" />
             </TableRow>
 
         </TableRow>

@@ -101,7 +101,8 @@
                 android:padding="10dp"
                 android:text="@string/login_newUser"
                 android:textAlignment="center"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                android:onClick="createNewUser"/>
         </TableRow>
 
         <TableRow
@@ -116,7 +117,8 @@
                 android:padding="10dp"
                 android:text="@string/login_resetPassword"
                 android:textAlignment="center"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                android:onClick="resetPassword"/>
         </TableRow>
 
         <TableRow
