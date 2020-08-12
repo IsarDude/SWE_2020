@@ -1,6 +1,7 @@
 package com.example.swe_2020_next;
 
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
@@ -21,6 +22,8 @@ public class EditProfileActivity extends AppCompatActivity {
     private EditText hobbyET;
     private EditText emailET;
     private boolean userVisibility;
+    private RadioButton onRB;
+    private RadioButton offRB;
 
     @Nullable
     @Override
@@ -38,6 +41,10 @@ public class EditProfileActivity extends AppCompatActivity {
         infoTextET = (EditText) findViewById(R.id.edit_infoText);
         hobbyET = (EditText) findViewById(R.id.edit_hobby);
         emailET = (EditText) findViewById(R.id.edit_email);
+        onRB = (RadioButton) findViewById(R.id.edit_visibilityOn);
+        offRB = (RadioButton) findViewById(R.id.edit_visibilityOff);
+
+        updateViewData();
     }
 
     public void saveChanges(View view) {
@@ -60,11 +67,35 @@ public class EditProfileActivity extends AppCompatActivity {
             case R.id.edit_visibilityOn:
                 if (checked)
                     userVisibility = true;
+                    onRB.setChecked(true);
+                    offRB.setChecked(false);
                     break;
             case R.id.edit_visibilityOff:
                 if (checked)
                     userVisibility = false;
+                    offRB.setChecked(true);
+                    onRB.setChecked(false);
                     break;
+        }
+    }
+
+    //Aktualisiert die Angezeigten Profilinformationen
+    public void updateViewData() {
+        firstNameET.setText(editProfileController.getFirstName());
+        lastNameET.setText(editProfileController.getLastName());
+        ageET.setText(editProfileController.getAge());
+        genderET.setText(editProfileController.getGender());
+        languageET.setText(editProfileController.getLanguage());
+        infoTextET.setText(editProfileController.getInfoText());
+        hobbyET.setText(editProfileController.getHobby());
+        emailET.setText(editProfileController.getEmail());
+
+        if(editProfileController.getVisibility()) {
+            onRB.setChecked(true);
+            offRB.setChecked(false);
+        } else {
+            offRB.setChecked(true);
+            onRB.setChecked(false);
         }
     }
 }

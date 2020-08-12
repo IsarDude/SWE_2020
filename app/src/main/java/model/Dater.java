@@ -37,6 +37,7 @@ public class Dater {
         user.setLanguage(language);
         user.setInfoText(infoText);
         user.addHobby(hobby);
+        user.setVisible(true);
     }
 
     public User getCurrentUser(){

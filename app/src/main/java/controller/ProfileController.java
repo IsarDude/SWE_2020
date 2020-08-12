@@ -20,8 +20,8 @@ public class ProfileController {
         return user.getLastName();
     }
 
-    public int getAge() {
-        return user.getAge();
+    public String getAge() {
+        return Integer.toString(user.getAge());
     }
 
     public String getGender() {

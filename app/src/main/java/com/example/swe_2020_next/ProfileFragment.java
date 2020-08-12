@@ -31,7 +31,6 @@ public class ProfileFragment extends Fragment{
 
     public ProfileFragment(Activity activity) {
         this.activity = activity;
-        profileController = new ProfileController();
     }
 
     @Nullable
@@ -42,6 +41,7 @@ public class ProfileFragment extends Fragment{
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        profileController = new ProfileController();
         Button btn1 = (Button) view.findViewById(R.id.editProfile);
 
         btn1.setOnClickListener(new View.OnClickListener() {
