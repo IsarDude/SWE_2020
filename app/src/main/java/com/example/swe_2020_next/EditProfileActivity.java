@@ -1,5 +1,6 @@
 package com.example.swe_2020_next;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
@@ -31,7 +32,7 @@ public class EditProfileActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_edit);
 
-        editProfileController = new EditProfileController();
+        editProfileController = new EditProfileController(this);
 
         firstNameET = (EditText) findViewById(R.id.edit_firstname);
         lastNameET = (EditText) findViewById(R.id.edit_lastname);

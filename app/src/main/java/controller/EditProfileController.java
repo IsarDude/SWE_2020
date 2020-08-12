@@ -1,15 +1,27 @@
 package controller;
 
+import android.app.Activity;
+import android.content.Intent;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.swe_2020_next.LoginActivity;
+import com.example.swe_2020_next.MainActivity;
+import com.example.swe_2020_next.ProfileFragment;
+import com.example.swe_2020_next.R;
+
 import model.Dater;
 import model.User;
 
-public class EditProfileController {
+public class EditProfileController extends AppCompatActivity {
     private Dater dater;
     private User user;
+    private Activity activity;
 
-    public EditProfileController() {
+    public EditProfileController(Activity activity) {
         dater = Dater.getInstance();
         user = dater.getCurrentUser();
+        this.activity = activity;
     }
 
     public void saveProfileChanges(String newFirstName, String newLastName, String newAge, String newGender, String newLanguage, String newInfoText, String newHobby, String newEmail, boolean newVisibility) {
@@ -24,6 +36,10 @@ public class EditProfileController {
         user.setVisible(newVisibility);
 
         //TODO: Wechsle zurück auf das Profile Fragment
+        Intent intent = new Intent(activity, MainActivity.class);
+        activity.startActivity(intent);
+        /*getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                new ProfileFragment(activity)).commit();*/
 
     }
 
