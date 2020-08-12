@@ -26,4 +26,17 @@
             android:title="@string/label_settings" />
     </group>
 
+    <item android:title="Aktionen">
+        <menu>
+            <item
+                android:id="@+id/nav_verify"
+                android:icon="@drawable/ic_verify"
+                android:title="Profil verifizieren" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_logout"
+                android:title="Log Out" />
+        </menu>
+    </item>
+
 </menu>

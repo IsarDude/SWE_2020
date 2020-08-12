@@ -15,6 +15,15 @@ public class LoginActivity extends Activity {
     }
 
     public void loginUser(View view) {
+        // code für den Login
         startActivity(new Intent(LoginActivity.this, MainActivity.class));
+    }
+
+    public void createNewUser(View view) {
+        //Code für neuen Nutzer
+    }
+
+    public void resetPassword(View view) {
+        //Code für Passwort vergessen
     }
 }

@@ -46,7 +46,7 @@ public class MatchesFragment extends Fragment {
         listView = (ListView) view.findViewById(R.id.matches_ListView);
 
         List<HashMap<String,String>> aList = new ArrayList<HashMap<String, String>>();
-        for (int x = 0; x < 5; x++){
+        for (int x = 0; x < ListviewTitle.length; x++){
             HashMap<String, String> hm = new HashMap<String,String>();
             hm.put("ListTitle",ListviewTitle[x]);
             hm.put("ListDescription",ListviewDescription[x]);

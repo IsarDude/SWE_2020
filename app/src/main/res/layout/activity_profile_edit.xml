@@ -414,6 +414,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/saveProfil"
                 android:background="@color/colorPrimary"
+                android:onClick="saveChanges"
                 android:textColor="#FFFFFF" />
         </TableRow>
     </TableLayout>

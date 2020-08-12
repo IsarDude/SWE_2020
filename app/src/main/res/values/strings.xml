@@ -47,6 +47,7 @@
     <string name="card_picture_description">picture of other user</string>
     <string name="like">Like</string>
     <string name="dislike">Dislike</string>
+    <string name="card_otherUsername">other Username</string>
 
 
 </resources>

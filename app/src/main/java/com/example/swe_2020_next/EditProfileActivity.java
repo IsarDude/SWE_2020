@@ -1,9 +1,7 @@
 package com.example.swe_2020_next;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,4 +16,7 @@ public class EditProfileActivity extends AppCompatActivity {
     }
 
 
+    public void saveChanges(View view) {
+        //Code für die Sicherung der neuen Einträge beim Profil bearbeiten
+    }
 }

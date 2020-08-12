@@ -7,10 +7,11 @@ public class Dater {
     SinglesPool singlesPool;
 
     public User showCard(){
-        return user;
+        User randomUser = singlesPool.getRandomUser();
+        return randomUser;
     }
 
-    public void viewProfile(String userID){
+    public void viewProfile(int userID){
 
     }
 
@@ -46,6 +47,7 @@ public class Dater {
             if(true/*password matches email found in database*/){
                 //Login successful
                 //set User as in database
+                //create SinglesPool
             }else{
                 //login failed
             }
