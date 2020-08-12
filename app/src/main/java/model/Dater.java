@@ -97,6 +97,7 @@ public class Dater {
 
     public void logout(){
         user=null;
+        //Wechseln zur Login Activity
     }
 
     public void addPhoto(File photo){

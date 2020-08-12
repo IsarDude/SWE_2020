@@ -384,17 +384,22 @@
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="center">
+                android:gravity="start">
 
-                <EditText
-                    android:id="@+id/edit_visible"
+
+                <RadioButton android:id="@+id/edit_visibilityOn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:elegantTextHeight="false"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:text="@string/user_vivible"
-                    android:textSize="12sp" />
+                    android:layout_marginEnd="20sp"
+                    android:text="@string/an"
+                    android:checked="true"
+                    android:onClick="getVisibilitySelection"/>
+                <RadioButton android:id="@+id/edit_visibilityOff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/aus"
+                    android:onClick="getVisibilitySelection"/>
+
             </TableRow>
 
         </TableRow>

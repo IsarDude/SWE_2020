@@ -53,6 +53,8 @@
     <string name="profile_password">Passwort</string>
     <string name="user_password">user_password</string>
     <string name="newProfile_label">Account erstellen</string>
+    <string name="an">An</string>
+    <string name="aus">Aus</string>
     <string name="profile_gender_preference">Geschlechts Präferenz</string>
     <string name="language_label">Sprache</string>
     <string name="maxAge_label">Höchstalter</string>
