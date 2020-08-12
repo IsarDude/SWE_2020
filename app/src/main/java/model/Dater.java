@@ -3,8 +3,28 @@ package model;
 import java.io.File;
 
 public class Dater {
+    private static Dater instance;
     User user;
     SinglesPool singlesPool;
+
+    private Dater(){
+
+    }
+
+    public static Dater getInstance(){
+        if (Dater.instance == null) {
+            Dater.instance = new Dater ();
+        }
+        return Dater.instance;
+    }
+
+    private static void setInstance(Dater dater){
+        if(Dater.instance!=null){
+            Dater.instance = null;
+            Dater.instance = dater;
+        }
+
+    }
 
     public User showCard(){
         User randomUser = singlesPool.getRandomUser();
@@ -42,15 +62,19 @@ public class Dater {
 
 
 
-    public void login(String email, String password){
+    public boolean login(String email, String password){
         if(true/*database contains email*/){
             if(true/*password matches email found in database*/){
                 //Login successful
                 //set User as in database
                 //create SinglesPool
+                return true;
             }else{
                 //login failed
+                return false;
             }
+        }else{
+            return false;
         }
     }
 
