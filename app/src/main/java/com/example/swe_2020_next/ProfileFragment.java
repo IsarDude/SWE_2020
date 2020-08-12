@@ -8,19 +8,31 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import controller.ProfileController;
+
 
 public class ProfileFragment extends Fragment{
-
     private Activity activity;
+    private ProfileController profileController;
+    private TextView firstNameTV;
+    private TextView lastNameTV;
+    private TextView ageTV;
+    private TextView genderTV;
+    private TextView languageTV;
+    private TextView infoTextTV;
+    private TextView hobbyTV;
+    private TextView emailTV;
+    private TextView visibilityTV;
 
     public ProfileFragment(Activity activity) {
         this.activity = activity;
+        profileController = new ProfileController();
     }
-
 
     @Nullable
     @Override
@@ -41,5 +53,35 @@ public class ProfileFragment extends Fragment{
 
             }
         });
+
+        firstNameTV = (TextView) view.findViewById(R.id.user_firstname);
+        lastNameTV = (TextView) view.findViewById(R.id.user_lastname);
+        ageTV = (TextView) view.findViewById(R.id.user_age);
+        genderTV = (TextView) view.findViewById(R.id.user_gender);
+        languageTV = (TextView) view.findViewById(R.id.user_language);
+        infoTextTV = (TextView) view.findViewById(R.id.user_infoText);
+        hobbyTV = (TextView) view.findViewById(R.id.user_hobby);
+        emailTV = (TextView) view.findViewById(R.id.user_email);
+        visibilityTV = (TextView) view.findViewById(R.id.user_visible);
+
+        updateViewData();
+    }
+
+    //Aktualisiert die Angezeigten Profilinformationen
+    public void updateViewData() {
+        firstNameTV.setText(profileController.getFirstName());
+        lastNameTV.setText(profileController.getLastName());
+        ageTV.setText(profileController.getAge());
+        genderTV.setText(profileController.getGender());
+        languageTV.setText(profileController.getLanguage());
+        infoTextTV.setText(profileController.getInfoText());
+        hobbyTV.setText(profileController.getHobby());
+        emailTV.setText(profileController.getEmail());
+
+        if(profileController.getVisibility()) {
+            visibilityTV.setText("Profil ist sichtbar");
+        } else {
+            visibilityTV.setText("Profil ist unsichtbar");
+        }
     }
 }
