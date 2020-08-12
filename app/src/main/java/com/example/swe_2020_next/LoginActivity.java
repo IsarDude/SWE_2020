@@ -34,7 +34,7 @@ public class LoginActivity extends Activity {
     }
 
     public void createNewUser(View view) {
-        startActivity(new Intent(LoginActivity.this, EditProfileActivity.class));
+        startActivity(new Intent(LoginActivity.this, NewProfilActivity.class));
     }
 
     public void resetPassword(View view) {

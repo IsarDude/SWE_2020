@@ -231,12 +231,12 @@ public class User {
         }
     }
 
-    public void changeFilter(int newMaxDistance, int newMaxAge,int newMinAge, String newGenderPreferences) {
+    public void changeFilter(int newMaxDistance, int newMinAge,int newMaxAge, String newGenderPreferences) {
         if(filter == null){
-            filter = new Filter(newMaxDistance,newMaxAge,newMinAge,newGenderPreferences);
+            filter = new Filter(newMaxDistance,newMinAge,newMaxAge,newGenderPreferences);
         }
         filter.setMaxDistance(newMaxDistance);
-        filter.setAgeRange(newMaxAge, newMinAge);
+        filter.setAgeRange(newMinAge, newMaxAge);
         filter.setGenderPreferences(newGenderPreferences);
     }
 

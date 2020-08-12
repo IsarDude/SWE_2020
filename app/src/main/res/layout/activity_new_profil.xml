@@ -27,10 +27,10 @@
 
 
                 <TextView
-                    android:id="@+id/profile_username_label"
+                    android:id="@+id/profile_email_label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/profile_username"
+                    android:text="@string/profile_email"
                     android:textStyle="bold" />
             </TableRow>
 
@@ -40,12 +40,12 @@
                 android:gravity="center">
 
                 <EditText
-                    android:id="@+id/edit_username"
+                    android:id="@+id/edit_new_email"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:elegantTextHeight="false"
                     android:ems="10"
-                    android:inputType="textPersonName"
+                    android:inputType="textEmailAddress"
                     android:textSize="12sp" />
             </TableRow>
 
@@ -77,7 +77,7 @@
                 android:gravity="center">
 
                 <EditText
-                    android:id="@+id/edit_passwort"
+                    android:id="@+id/edit_new_passwort"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:elegantTextHeight="false"
@@ -117,7 +117,7 @@
                 android:gravity="center">
 
                 <EditText
-                    android:id="@+id/edit_firstname"
+                    android:id="@+id/edit_new_firstname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:elegantTextHeight="false"
@@ -154,7 +154,7 @@
                 android:gravity="center">
 
                 <EditText
-                    android:id="@+id/edit_lastname"
+                    android:id="@+id/edit_new_lastname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:elegantTextHeight="false"
@@ -190,12 +190,12 @@
                 android:gravity="center">
 
                 <EditText
-                    android:id="@+id/edit_age"
+                    android:id="@+id/edit_new_age"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:elegantTextHeight="false"
                     android:ems="10"
-                    android:inputType="textPersonName"
+                    android:inputType="number"
                     android:textSize="12sp" />
             </TableRow>
 
@@ -227,7 +227,7 @@
                 android:gravity="center">
 
                 <EditText
-                    android:id="@+id/edit_gender"
+                    android:id="@+id/edit_new_gender"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:elegantTextHeight="false"
@@ -264,7 +264,7 @@
                 android:gravity="center">
 
                 <EditText
-                    android:id="@+id/edit_language"
+                    android:id="@+id/edit_new_language"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:elegantTextHeight="false"
@@ -301,7 +301,7 @@
                 android:gravity="center">
 
                 <EditText
-                    android:id="@+id/edit_infoText"
+                    android:id="@+id/edit_new_infoText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:elegantTextHeight="false"
@@ -338,7 +338,7 @@
                 android:gravity="center">
 
                 <EditText
-                    android:id="@+id/edit_hobby"
+                    android:id="@+id/edit_new_hobby"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:elegantTextHeight="false"
@@ -349,79 +349,6 @@
 
         </TableRow>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:padding="10sp">
-
-
-                <TextView
-                    android:id="@+id/profile_email_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/profile_email"
-                    android:textStyle="bold" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center">
-
-                <EditText
-                    android:id="@+id/edit_email"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:elegantTextHeight="false"
-                    android:ems="10"
-                    android:inputType="textEmailAddress"
-                    android:textSize="12sp" />
-            </TableRow>
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:padding="10sp">
-
-
-                <TextView
-                    android:id="@+id/profile_visible_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/profile_visible"
-                    android:textStyle="bold" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center">
-
-                <EditText
-                    android:id="@+id/edit_visible"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:elegantTextHeight="false"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:textSize="12sp" />
-            </TableRow>
-
-        </TableRow>
 
 
 

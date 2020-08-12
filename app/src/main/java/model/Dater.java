@@ -4,7 +4,7 @@ import java.io.File;
 
 public class Dater {
     private static Dater instance;
-    User user = null;
+    User user;
     SinglesPool singlesPool;
 
     private Dater(){
@@ -24,6 +24,19 @@ public class Dater {
             Dater.instance = dater;
         }
 
+    }
+
+    public void createUser(String email, String password, String firstName, String lastName, int age, String gender, String language, String infoText, String hobby){
+        user = new User();
+        user.setEmail(email);
+        user.setPassword(password);
+        user.setFirstName(firstName);
+        user.setLastName(lastName);
+        user.setAge(age);
+        user.setGender(gender);
+        user.setLanguage(language);
+        user.setInfoText(infoText);
+        user.addHobby(hobby);
     }
 
     public User getCurrentUser(){

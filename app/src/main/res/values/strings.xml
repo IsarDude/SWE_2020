@@ -53,6 +53,28 @@
     <string name="profile_password">Passwort</string>
     <string name="user_password">user_password</string>
     <string name="newProfile_label">Account erstellen</string>
+    <string name="profile_gender_preference">Geschlechts Präferenz</string>
+    <string name="language_label">Sprache</string>
+    <string name="maxAge_label">Höchstalter</string>
+    <string name="label_filter">Dein Filter</string>
+    <string name="minAge_label">Mindestalter</string>
+    <string name="filter_gender">Geschlecht</string>
+    <string name="filter_saveButton_label">Filter speichern</string>
+    <string name="maxDistance_label">Maximale Distanz</string>
+
+    <string-array name="language_array">
+        <item>Deutsch</item>
+        <item>Englisch</item>
+        <item>Russisch</item>
+        <item>Indisch</item>
+        <item>Französisch</item>
+    </string-array>
+
+    <string-array name="gender_array">
+        <item>Mann</item>
+        <item>Frau</item>
+        <item>Alternativ</item>
+    </string-array>
 
 
 </resources>
