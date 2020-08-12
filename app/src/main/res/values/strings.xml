@@ -48,6 +48,11 @@
     <string name="like">Like</string>
     <string name="dislike">Dislike</string>
     <string name="card_otherUsername">other Username</string>
+    <string name="profile_username">Benutzername</string>
+    <string name="user_username">user_username</string>
+    <string name="profile_password">Passwort</string>
+    <string name="user_password">user_password</string>
+    <string name="newProfile_label">Account erstellen</string>
 
 
 </resources>

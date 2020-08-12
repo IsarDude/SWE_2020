@@ -4,7 +4,7 @@ import java.io.File;
 
 public class Dater {
     private static Dater instance;
-    User user;
+    User user = null;
     SinglesPool singlesPool;
 
     private Dater(){
@@ -24,6 +24,10 @@ public class Dater {
             Dater.instance = dater;
         }
 
+    }
+
+    public User getCurrentUser(){
+        return user;
     }
 
     public User showCard(){
