@@ -238,7 +238,6 @@ public class User {
         Like like = new Like(otherUserID);
         likes.add(like);
         like.checkForMatch(userID);
-        connectMySql.addLike(otherUserID, userID); //To save all the Likes in the DB
     }
 
     public void createDislike(int otherUserID) {

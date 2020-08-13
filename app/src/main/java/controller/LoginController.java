@@ -1,6 +1,6 @@
 package controller;
 
-        import model.Dater;
+import model.Dater;
 
 public class LoginController {
     Dater dater = Dater.getInstance();
