@@ -28,9 +28,13 @@ public class CardsController {
         otherUserID = otherUser.getUserID();
     }
 
-    public String getOtherUserName() {
-        //TODO: return otherUser.getFirstName(); <- Auskommentieren hier rückgängig machen wenn DB-Anbindung funktioniert
-        return "Catfish Cathy";
+    public String getOtherUserNameAndAge() {
+        //TODO: Auskommentieren hier rückgängig machen wenn DB-Anbindung funktioniert
+        /*String otherUserName = otherUser.getFirstName();
+        int otherUserAge = otherUser.getAge();
+        String cardInfo = otherUserName + ", " + otherUserAge;
+        return cardInfo;*/
+        return "Emily, 24";
     }
 
     //Hier könnte eine Methode hin um das Profilbild des otherUser zu getten

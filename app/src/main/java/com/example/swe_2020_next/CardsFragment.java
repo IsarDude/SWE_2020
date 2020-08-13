@@ -66,8 +66,8 @@ public class CardsFragment extends Fragment {
     }
 
     public void updateCard() {
-        String otherUserName = cardsController.getOtherUserName();
-        otherUsernameTV.setText(otherUserName);
+        String otherUserNameAndAge = cardsController.getOtherUserNameAndAge();
+        otherUsernameTV.setText(otherUserNameAndAge);
         //Hier könnte Code stehen um das Profilbild der neuen Karte in der View zu updaten
     }
 
