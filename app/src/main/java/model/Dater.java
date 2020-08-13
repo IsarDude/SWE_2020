@@ -88,10 +88,10 @@ public class Dater {
 
 
     public boolean login(String email, String password){
-        if(email.equals("tester"))
-            return true;
+        return true;
+        /*
         user = connectMySql.getCurrentUser(email, password);
-        return user != null;
+        return user != null;*/
     }
 
     public void logout(){
