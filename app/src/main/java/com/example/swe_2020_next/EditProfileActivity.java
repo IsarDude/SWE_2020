@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Toast;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import controller.EditProfileController;
@@ -51,6 +53,7 @@ public class EditProfileActivity extends AppCompatActivity {
         String newEmail = emailET.getText().toString();
 
         editProfileController.saveProfileChanges(newFirstName, newAge, newGender, newInfoText, newHobby, newEmail, userVisibility);
+        Toast.makeText(this, "Dein Profil wurde aktualisiert!", Toast.LENGTH_LONG).show();
     }
 
     public void getVisibilitySelection(View view) {

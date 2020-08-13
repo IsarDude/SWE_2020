@@ -1,5 +1,7 @@
 package model;
 
+import android.util.Log;
+
 import java.io.File;
 
 import datingDatabase.ConnectMySql;
@@ -39,7 +41,6 @@ public class Dater {
         user.addHobby(hobby);
         user.setVisible(true);
 
-        connectMySql = new ConnectMySql(); //Die Zeile hier ist neu @ Alex, davor kam bei mir ein Null Exception Error
         connectMySql.addUser(email, gender, gender, firstName, age, password);
     }
 
