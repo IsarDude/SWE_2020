@@ -6,10 +6,8 @@ import java.util.LinkedList;
 
 public class User {
     private String firstName;
-    private  String lastName;
     private int age;
     private String gender;
-    private String language;
     private String infoText;
     private String email;
     private String password;
@@ -76,14 +74,6 @@ public class User {
         this.firstName = firstName;
     }
 
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
     public int getAge() {
         return age;
     }
@@ -98,14 +88,6 @@ public class User {
 
     public void setGender(String gender) {
         this.gender = gender;
-    }
-
-    public String getLanguage() {
-        return language;
-    }
-
-    public void setLanguage(String language) {
-        this.language = language;
     }
 
     public String getInfoText() {

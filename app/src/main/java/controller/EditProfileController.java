@@ -24,12 +24,10 @@ public class EditProfileController extends AppCompatActivity {
         this.activity = activity;
     }
 
-    public void saveProfileChanges(String newFirstName, String newLastName, String newAge, String newGender, String newLanguage, String newInfoText, String newHobby, String newEmail, boolean newVisibility) {
+    public void saveProfileChanges(String newFirstName, String newAge, String newGender, String newInfoText, String newHobby, String newEmail, boolean newVisibility) {
         user.setFirstName(newFirstName);
-        user.setLastName(newLastName);
         user.setAge(Integer.parseInt(newAge));
         user.setGender(newGender);
-        user.setLanguage(newLanguage);
         user.setInfoText(newInfoText);
         user.addHobby(newHobby);
         user.setEmail(newEmail);
@@ -47,20 +45,12 @@ public class EditProfileController extends AppCompatActivity {
         return user.getFirstName();
     }
 
-    public String getLastName() {
-        return user.getLastName();
-    }
-
     public String getAge() {
         return Integer.toString(user.getAge());
     }
 
     public String getGender() {
         return user.getGender();
-    }
-
-    public String getLanguage() {
-        return user.getLanguage();
     }
 
     public String getInfoText() {

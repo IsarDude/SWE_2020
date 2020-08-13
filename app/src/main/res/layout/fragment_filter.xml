@@ -40,6 +40,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/maxDistance_label"
                     android:textAlignment="center"
+                    android:paddingLeft="10sp"
                     android:textSize="18sp"
                     android:textStyle="bold" />
             </TableRow>

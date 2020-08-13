@@ -35,7 +35,7 @@
     <string name="editProfil">Profil bearbeiten</string>
     <string name="saveProfil">Änderungen speichern</string>
     <string name="user_hobby">user_hobby</string>
-    <string name="profile_hobby">Hobby</string>
+    <string name="profile_hobby">Hobbies</string>
 
 
     <string name="login_username_label">Benutzername</string>

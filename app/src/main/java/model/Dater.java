@@ -1,5 +1,7 @@
 package model;
 
+import android.util.Log;
+
 import java.io.File;
 
 import datingDatabase.ConnectMySql;
@@ -26,18 +28,15 @@ public class Dater {
             Dater.instance = null;
             Dater.instance = dater;
         }
-
     }
 
-    public void createUser(String email, String password, String firstName, String lastName, int age, String gender, String language, String infoText, String hobby){
+    public void createUser(String email, String password, String firstName, int age, String gender, String infoText, String hobby){
         user = new User();
         user.setEmail(email);
         user.setPassword(password);
         user.setFirstName(firstName);
-        user.setLastName(lastName);
         user.setAge(age);
         user.setGender(gender);
-        user.setLanguage(language);
         user.setInfoText(infoText);
         user.addHobby(hobby);
         user.setVisible(true);
@@ -74,18 +73,14 @@ public class Dater {
 
 
 
-    public void changeUserInfo(String firstName, String lastName, int age, String gender, String email, boolean visible, String language, String infoText){
+    public void changeUserInfo(String firstName,int age, String gender, String email, boolean visible, String infoText){
         user.setFirstName(firstName);
-        user.setLastName(lastName);
         user.setAge(age);
         user.setGender(gender);
         user.setEmail(email);
         user.setVisible(visible);
-        user.setLanguage(language);
         user.setInfoText(infoText);
     }
-
-
 
     public boolean login(String email, String password){
         return true;
