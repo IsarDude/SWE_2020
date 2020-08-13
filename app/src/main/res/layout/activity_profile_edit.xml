@@ -109,43 +109,6 @@
 
 
                 <TextView
-                    android:id="@+id/profile_lastname_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/profile_lastname"
-                    android:textStyle="bold" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center">
-
-                <EditText
-                    android:id="@+id/edit_lastname"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:elegantTextHeight="false"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:text="@string/user_lastname"
-                    android:textSize="12sp" />
-            </TableRow>
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:padding="10sp">
-
-
-                <TextView
                     android:id="@+id/profile_age_label"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -204,44 +167,6 @@
                     android:ems="10"
                     android:inputType="textPersonName"
                     android:text="@string/user_gender"
-                    android:textSize="12sp" />
-            </TableRow>
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:padding="10sp">
-
-
-                <TextView
-                    android:id="@+id/profile_language_label"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/profile_language"
-                    android:textStyle="bold" />
-            </TableRow>
-
-            <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center">
-
-                <EditText
-                    android:id="@+id/edit_language"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:elegantTextHeight="false"
-                    android:ems="10"
-                    android:inputType="textPersonName"
-                    android:text="@string/user_language"
                     android:textSize="12sp" />
             </TableRow>
 

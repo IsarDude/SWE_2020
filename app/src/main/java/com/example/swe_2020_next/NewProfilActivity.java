@@ -15,10 +15,8 @@ public class NewProfilActivity extends AppCompatActivity {
     EditText newEmail;
     EditText newPassword;
     EditText newFirstName;
-    EditText newLastName;
     EditText newAge;
     EditText newGender;
-    EditText newLanguage;
     EditText newInfoText;
     EditText newHobby;
     NewProfileController newProfileController = new NewProfileController();
@@ -32,10 +30,8 @@ public class NewProfilActivity extends AppCompatActivity {
         newEmail = (EditText) findViewById(R.id.edit_new_email);
         newPassword = (EditText) findViewById(R.id.edit_new_passwort);
         newFirstName = (EditText) findViewById(R.id.edit_new_firstname);
-        newLastName = (EditText) findViewById(R.id.edit_new_lastname);
         newAge = (EditText) findViewById(R.id.edit_new_age);
         newGender = (EditText) findViewById(R.id.edit_new_gender);
-        newLanguage = (EditText) findViewById(R.id.edit_new_language);
         newInfoText = (EditText) findViewById(R.id.edit_new_infoText);
         newHobby = (EditText) findViewById(R.id.edit_new_hobby);
 
@@ -49,10 +45,8 @@ public class NewProfilActivity extends AppCompatActivity {
                 newEmail.getText().toString(),
                 newPassword.getText().toString(),
                 newFirstName.getText().toString(),
-                newLastName.getText().toString(),
                 Integer.parseInt(newAge.getText().toString()),
                 newGender.getText().toString(),
-                newLanguage.getText().toString(),
                 newInfoText.getText().toString(),
                 newHobby.getText().toString()
         );

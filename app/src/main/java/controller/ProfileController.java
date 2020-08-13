@@ -16,20 +16,12 @@ public class ProfileController {
         return user.getFirstName();
     }
 
-    public String getLastName() {
-        return user.getLastName();
-    }
-
     public String getAge() {
         return Integer.toString(user.getAge());
     }
 
     public String getGender() {
         return user.getGender();
-    }
-
-    public String getLanguage() {
-        return user.getLanguage();
     }
 
     public String getInfoText() {
