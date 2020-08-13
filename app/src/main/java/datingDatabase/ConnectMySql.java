@@ -205,7 +205,7 @@ private Connection con;
         }
         return true;
     }
-    public void getUserForPool(int ageMax, int ageMin, String genderPreference, String gender){
+    public LinkedList<User> getUserForPool(int ageMax, int ageMin, String genderPreference, String gender){
         String userQuery = "select UserID,FirstName,Age;Gender,About_Me, verified from user where (visible =1 and (age between ?and?) and Gender =? and Gender_Preference=?)";
         LinkedList<User> pool = new LinkedList<>();
         try {
@@ -252,6 +252,7 @@ private Connection con;
         }catch(Exception e){
             e.printStackTrace();
         }
+        return pool;
     }
 
     public void addLike(int otherUserId,int currentUserId){
