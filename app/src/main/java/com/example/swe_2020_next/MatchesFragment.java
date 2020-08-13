@@ -23,11 +23,11 @@ public class MatchesFragment extends Fragment {
     ListView listView;
 
     String[] ListviewTitle = new String[]{
-            "Horst Peter Manheim","Siegfried Müller","xXDeathVirus69Xx","THE Simp","Gregorowizc"
+            "User 1","User 2","User 3","User 4","User 5"
     };
     String[] ListviewDescription = new String[]{
             "25","67","12","19",
-            "Listview Description 5"
+            "27"
     };
     // images
     int[] ListviewImages = new int[]{
