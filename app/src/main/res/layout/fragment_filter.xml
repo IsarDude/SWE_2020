@@ -39,8 +39,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/maxDistance_label"
-                    android:textAlignment="center"
-                    android:paddingLeft="10sp"
+                    android:textAlignment="textStart"
+                    android:paddingLeft="65sp"
                     android:textSize="18sp"
                     android:textStyle="bold" />
             </TableRow>
@@ -79,7 +79,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/minAge_label"
-                    android:textAlignment="center"
+                    android:textAlignment="textStart"
                     android:textSize="18sp"
                     android:textStyle="bold" />
             </TableRow>
@@ -117,7 +117,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/maxAge_label"
-                    android:textAlignment="center"
+                    android:textAlignment="textStart"
                     android:textSize="18sp"
                     android:textStyle="bold" />
             </TableRow>
@@ -155,7 +155,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/filter_gender"
-                    android:textAlignment="center"
+                    android:textAlignment="textStart"
+                    android:paddingRight="40sp"
                     android:textSize="18sp"
                     android:textStyle="bold" />
             </TableRow>

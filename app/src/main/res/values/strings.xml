@@ -60,9 +60,9 @@
     <string name="maxAge_label">Höchstalter</string>
     <string name="label_filter">Dein Filter</string>
     <string name="minAge_label">Mindestalter</string>
-    <string name="filter_gender">Geschlecht</string>
+    <string name="filter_gender">Suche</string>
     <string name="filter_saveButton_label">Filter speichern</string>
-    <string name="maxDistance_label">Maximale Distanz</string>
+    <string name="maxDistance_label">Maximale Entfernung</string>
 
     <string-array name="language_array">
         <item>Deutsch</item>
