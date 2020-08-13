@@ -2,10 +2,13 @@ package model;
 
 import java.io.File;
 
+import datingDatabase.ConnectMySql;
+
 public class Dater {
     private static Dater instance;
     User user;
     SinglesPool singlesPool;
+    ConnectMySql connectMySql;
 
     private Dater(){
 
@@ -38,6 +41,8 @@ public class Dater {
         user.setInfoText(infoText);
         user.addHobby(hobby);
         user.setVisible(true);
+
+        connectMySql.addUser(email, gender, gender, firstName, age, password);
     }
 
     public User getCurrentUser(){
@@ -45,8 +50,10 @@ public class Dater {
     }
 
     public User showCard(){
-        User randomUser = singlesPool.getRandomUser();
-        return randomUser;
+        if(singlesPool==null){
+            singlesPool = new SinglesPool(connectMySql.getUserForPool(user.getFilter().getMaxAge(),user.getFilter().getMinAge(), user.getFilter().getGenderPreferences(), user.getGender()));
+        }
+        return singlesPool.getRandomUser();
     }
 
     public void viewProfile(int userID){
@@ -81,24 +88,12 @@ public class Dater {
 
 
     public boolean login(String email, String password){
-        if(true/*database contains email*/){
-            if(true/*password matches email found in database*/){
-                //Login successful
-                //set User as in database
-                //create SinglesPool
-                return true;
-            }else{
-                //login failed
-                return false;
-            }
-        }else{
-            return false;
-        }
+        user = connectMySql.getCurrentUser(email, password);
+        return user.getFirstName() != null;
     }
 
     public void logout(){
         user=null;
-        //Wechseln zur Login Activity
     }
 
     public void addPhoto(File photo){
@@ -115,14 +110,17 @@ public class Dater {
 
     public void addHobby(String name){
         user.addHobby(name);
+        //connectMySql.addHobby(user.getHobbies(), user.getUserID());
     }
 
     public void removeHobby(String hobbyID){
         user.removeHobby(hobbyID);
+        //  connectMySql.removeHobby(user.getHobbies(), user.getUserID());
     }
 
     public void editSubject(String name, int semester){
         user.changeSubject(semester, name);
+        connectMySql.changeSubject(user.getSubject(), user.getUserID());
     }
 
     public void connectToDatabase(){
