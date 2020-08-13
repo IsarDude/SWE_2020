@@ -64,8 +64,8 @@ public class Dater {
         connectMySql.addLike(otherUserId, user.getUserID());
     }
 
-    public void dislike(String dislikedUserID){
-        user.createDislike(dislikedUserID);
+    public void dislike(int otherUserID){
+        user.createDislike(otherUserID);
     }
 
     public void showMatches(){

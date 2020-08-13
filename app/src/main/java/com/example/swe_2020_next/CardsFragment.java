@@ -7,11 +7,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import org.w3c.dom.Text;
+
+import controller.CardsController;
+
+
 public class CardsFragment extends Fragment {
+    private CardsController cardsController;
+    private TextView otherUsernameTV;
+
 
     /* Code falls Activity benötigt wird (Bei szenenwechsel nötig)
     private Activity activity;
@@ -29,13 +38,18 @@ public class CardsFragment extends Fragment {
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+        cardsController = new CardsController();
+        otherUsernameTV = (TextView) view.findViewById(R.id.card_username);
+        updateCard();
+
         Button btn1 = (Button) view.findViewById(R.id.button_like);
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 //Code für Like
-
+                cardsController.like();
+                updateCard();
             }
         });
 
@@ -45,8 +59,16 @@ public class CardsFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 //Code für Dislike
-
+                cardsController.dislike();
+                updateCard();
             }
         });
     }
+
+    public void updateCard() {
+        String otherUserName = cardsController.getOtherUserName();
+        otherUsernameTV.setText(otherUserName);
+        //Hier könnte Code stehen um das Profilbild der neuen Karte in der View zu updaten
+    }
+
 }

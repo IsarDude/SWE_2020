@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
 
+import datingDatabase.ConnectMySql;
+
 public class User {
     private String firstName;
     private int age;
@@ -23,6 +25,7 @@ public class User {
     private ArrayList<Match> matches;
     private ArrayList<Like> likes;
     private ArrayList<Dislike> dislikes;
+    private ConnectMySql connectMySql;
 
     public User() {
         hobbies = new LinkedList<Hobby>();
@@ -32,6 +35,8 @@ public class User {
         likes = new ArrayList<Like>();
         dislikes = new ArrayList<Dislike>();
         matches = new ArrayList<Match>();
+
+        connectMySql = new ConnectMySql();
     }
 
     public void setHobbies(LinkedList<Hobby> hobbies) {
@@ -229,15 +234,15 @@ public class User {
     }
 
     //Add a Like to the Array and check for a possible Match
-    public void createLike(int likedUserId) {
-        Like like = new Like(likedUserId);
-        int freeIndex = likes.size();
-        likes.set(freeIndex, like);
+    public void createLike(int otherUserID) {
+        Like like = new Like(otherUserID);
+        likes.add(like);
         like.checkForMatch(userID);
+        connectMySql.addLike(otherUserID, userID); //To save all the Likes in the DB
     }
 
-    public void createDislike(String dislikedUserId) {
-        Dislike dislike = new Dislike(dislikedUserId);
+    public void createDislike(int otherUserID) {
+        Dislike dislike = new Dislike(otherUserID);
         dislikes.add(dislike);
     }
 

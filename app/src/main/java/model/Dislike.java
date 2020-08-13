@@ -2,13 +2,13 @@ package model;
 
 public class Dislike {
 
-    private String dislikedUserId;
+    private int otherUserID;
 
-    public Dislike(String dislikedUserId){
-        this.dislikedUserId = dislikedUserId;
+    public Dislike(int otherUserID){
+        this.otherUserID = otherUserID;
     }
 
-    public String getDislikedUserId(){
-        return dislikedUserId;
+    public int getDislikedUserId(){
+        return otherUserID;
     }
 }

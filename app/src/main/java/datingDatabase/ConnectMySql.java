@@ -285,14 +285,12 @@ private Connection con;
             if(res.next()){
                 addMatch(currentUser,otherUser);
                 return true;
-
             }
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
         return false;
-
     }
 
     private void addMatch(int UserId1, int UserId2){

@@ -1,23 +1,29 @@
 package model;
 
-public class Like {
-    private int likedUserId;
-    Match match;
+import datingDatabase.ConnectMySql;
 
-    public Like(int likedUserID){
-        this.likedUserId = likedUserID;
+public class Like {
+    private int otherUserID;
+    private Match match;
+    private ConnectMySql connectMySql;
+
+    public Like(int otherUserID){
+        this.otherUserID = otherUserID;
+        connectMySql = new ConnectMySql();
     }
 
-    public int getLikedUserId(){
-        return likedUserId;
+    public int getOtherUserID(){
+        return otherUserID;
     }
 
     public void checkForMatch(int userId){
-
+        if (connectMySql.checkForMatch(otherUserID, userId)) {
+            createMatch();
+        }
     }
 
     public void createMatch(){
-        match = new Match(10, likedUserId);     //10 ist Plathalter, damit kein Fehler geworfen wird, Match erwartet momentan noch int matchID und int likeduseerid
+        match = new Match(10, otherUserID);     //10 ist Plathalter, damit kein Fehler geworfen wird, Match erwartet momentan noch int matchID und int likeduseerid
     }
 
     public Match getMatch(){
