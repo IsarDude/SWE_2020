@@ -11,7 +11,7 @@ public class Dater {
     ConnectMySql connectMySql;
 
     private Dater(){
-
+        connectToDatabase();
     }
 
     public static Dater getInstance(){
@@ -124,7 +124,8 @@ public class Dater {
     }
 
     public void connectToDatabase(){
-
+        connectMySql = new ConnectMySql();
+        connectMySql.execute();
     }
 
     //Probably not in final version
