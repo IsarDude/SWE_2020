@@ -14,10 +14,13 @@ import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
+import controller.MainActivityController;
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     //Nav
     private DrawerLayout drawer;
     //Nav end
+    MainActivityController mainActivityController = new MainActivityController();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +77,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.nav_logout:
                 Toast.makeText(this, "Sie werden ausgeloggt!", Toast.LENGTH_LONG).show();
+                mainActivityController.logoutControl();
                 startActivity(new Intent(MainActivity.this, LoginActivity.class));
                 break;
         }
