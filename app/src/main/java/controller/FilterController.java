@@ -7,6 +7,7 @@ public class FilterController {
 
     public void filterControl(int maxRange, int minAge,int maxAge,String gender){
         dater.getCurrentUser().changeFilter(maxRange, minAge, maxAge, gender);
+        //TODO Filter speichernf
     }
 }
 

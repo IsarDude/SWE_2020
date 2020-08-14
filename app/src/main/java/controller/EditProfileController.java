@@ -25,13 +25,7 @@ public class EditProfileController extends AppCompatActivity {
     }
 
     public void saveProfileChanges(String newFirstName, String newAge, String newGender, String newInfoText, String newHobby, String newEmail, boolean newVisibility) {
-        user.setFirstName(newFirstName);
-        user.setAge(Integer.parseInt(newAge));
-        user.setGender(newGender);
-        user.setInfoText(newInfoText);
-        user.addHobby(newHobby);
-        user.setEmail(newEmail);
-        user.setVisible(newVisibility);
+        dater.changeUserInfo(newFirstName, Integer.parseInt(newAge),newGender,  newEmail, newVisibility,newHobby, newInfoText);
 
         //TODO: Wechsle zurück auf das Profile Fragment
         Intent intent = new Intent(activity, MainActivity.class);

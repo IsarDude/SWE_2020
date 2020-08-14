@@ -66,6 +66,7 @@ public class Dater {
 
     public void dislike(int otherUserID){
         user.createDislike(otherUserID);
+        //TODO DB entry
     }
 
     public void showMatches(){
@@ -74,13 +75,14 @@ public class Dater {
 
 
 
-    public void changeUserInfo(String firstName,int age, String gender, String email, boolean visible, String infoText){
+    public void changeUserInfo(String firstName,int age, String gender, String email, boolean visible,String hobby, String infoText){
         user.setFirstName(firstName);
         user.setAge(age);
         user.setGender(gender);
         user.setEmail(email);
         user.setVisible(visible);
         user.setInfoText(infoText);
+        user.addHobby(hobby);
     }
 
     public boolean login(String email, String password){
