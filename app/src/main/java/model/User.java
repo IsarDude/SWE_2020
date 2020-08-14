@@ -255,6 +255,6 @@ public class User {
     }
 
     public void updateFromDatabase() {
-        //Was passiert hier?
+        //TODO
     }
 }

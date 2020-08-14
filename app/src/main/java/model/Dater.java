@@ -14,6 +14,16 @@ public class Dater {
 
     private Dater(){
         connectToDatabase();
+        //User zum Testen des Programms ohne Datenbank
+        user = new User();
+        user.setEmail("test@hof.de");
+        user.setPassword("1234");
+        user.setFirstName("Jakob");
+        user.setAge(25);
+        user.setGender("Mann");
+        user.setInfoText("Student");
+        user.addHobby("Programmieren");
+        user.setVisible(true);
     }
 
     public static Dater getInstance(){
